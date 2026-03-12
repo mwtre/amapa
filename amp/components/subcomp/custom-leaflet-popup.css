@@ -1,0 +1,22 @@
+.leaflet-popup-content-wrapper {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .leaflet-popup-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .leaflet-popup-tip-container {
+    display: none !important;
+  }
+  
+  .leaflet-popup {
+    margin-bottom: 0 !important;
+  }
+  
+  .leaflet-container a.leaflet-popup-close-button {
+    display: none !important;
+  }

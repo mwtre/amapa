@@ -1,0 +1,82 @@
+/* Deck.css */
+
+/* Container for the entire deck */
+.deck-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Category Card Container */
+  .category-card-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent; /* Keep background transparent */
+  }
+  
+  .category-card-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Decks Display Area */
+  .decks-display {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Each deck display */
+  .deck-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive design adjustments */
+  @media (min-width: 768px) {
+    .decks-display {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .decks-display {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .deck-container {
+      padding: 10px;
+    }
+    
+    .decks-display {
+      gap: 1px; /* Tighter gap for small screens */
+      margin-top: 10px; /* Reduced top margin */
+    }
+  
+    .category-card-container img {
+      max-width: 80%;
+    }
+  }
+  

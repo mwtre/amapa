@@ -1,0 +1,59 @@
+/* styles/Codec.module.css */
+.codecContainer {
+    height: 100vh;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .mCodec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mainCon {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .arrow {
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+  .freq {
+    color: #03fb8d;
+    font-size: 36px;
+  }
+  
+  .barsCon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .bar {
+    height: 10px;
+    background-color: #397975;
+  }
+  
+  .textCon {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .cChar {
+    font-size: 18px;
+  }
+  
+  .charBox {
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    border: 2px solid #03fb8d;
+    margin-bottom: 20px;
+  }
+  

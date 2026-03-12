@@ -1,0 +1,36 @@
+/* amp/components/subcomp/Card.css */
+
+.card {
+  width: 200px; /* Set a fixed width for the card */
+  height: 300px; /* Set a fixed height for the card */
+  border-radius: 10px; /* Rounded corners for a card-like appearance */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.card-face {
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.card-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensure the image covers the card area */
+  border-radius: 10px; /* Match border radius */
+}
+
+/* Additional styles for text */
+.card-front span {
+  color: #333; /* Text color for the front */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.card-back span {
+  font-size: 1.5rem; /* Adjust font size for back text */
+}
+
+.hidden {
+  display: none; /* Hide the element */
+}
