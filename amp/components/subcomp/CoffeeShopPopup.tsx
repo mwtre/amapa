@@ -8,8 +8,9 @@ import { Card } from '@/app/data/card';
 
 interface CoffeeShopPopupProps {
   shop: CoffeeShopData; 
-  onClose: () => void;
+  onClose?: () => void;
   onZoomIn: (lat: number, lng: number) => void;
+  onGoToShop?: (shopId: string) => void;
 }
 
 const StatBar: React.FC<{ value: number, label: string }> = ({ value, label }) => (
@@ -22,11 +23,7 @@ const StatBar: React.FC<{ value: number, label: string }> = ({ value, label }) =
   </div>
 );
 
-const goToShop = (shopId: string) => {
-  console.log(`Navigating to shop with ID: ${shopId}`);
-};
-
-export const CoffeeShopPopup: React.FC<CoffeeShopPopupProps> = ({ shop, onClose, onZoomIn }) => {
+export const CoffeeShopPopup: React.FC<CoffeeShopPopupProps> = ({ shop, onZoomIn, onGoToShop }) => {
   const router = useRouter();
 
   const card = new Card(
@@ -130,7 +127,7 @@ export const CoffeeShopPopup: React.FC<CoffeeShopPopupProps> = ({ shop, onClose,
         <Button 
           className="bg-green-500/20 text-green-400 hover:bg-green-500/40 border border-green-500/50" 
           size="sm"
-          onClick={() => goToShop(shop.id)}
+          onClick={() => onGoToShop?.(shop.id)}
         >
           Go to Shop
         </Button>
