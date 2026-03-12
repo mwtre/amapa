@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Zap, Shield, Wind, Heart, Plus, Code, Cpu, Database, Network } from "lucide-react"
 import { useToast } from "@chakra-ui/react";
+import { withBasePath } from "@/lib/basePath";
 // Define Rarity types if applicable
 type Rarity = 'Common' | 'Rare' | 'Legendary'
 
@@ -40,11 +41,11 @@ const streakLevels = ['Noob', 'Amateur', 'Pro', 'Hacker', 'God']
 const choices = ['Red Pill', 'Blue Pill', 'Green Pill']
 
 const streakImages: Record<string, string> = {
-  'Noob': '/images/Level/noob.jpeg',
-  'Amateur': '/images/Level/amatur.jpeg',
-  'Pro': '/images/Level/pro.jpeg',
-  'Hacker': '/images/Level/legend.jpeg',
-  'God': '/images/Level/god.jpeg'
+  'Noob': withBasePath('/images/Level/noob.jpeg'),
+  'Amateur': withBasePath('/images/Level/amatur.jpeg'),
+  'Pro': withBasePath('/images/Level/pro.jpeg'),
+  'Hacker': withBasePath('/images/Level/legend.jpeg'),
+  'God': withBasePath('/images/Level/god.jpeg')
 }
 
 // SkillTree Component

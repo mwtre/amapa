@@ -7,12 +7,13 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ChevronLeft, ChevronRight, Search } from "lucide-react"
 import Image from 'next/image'
+import { withBasePath } from "@/lib/basePath"
 
 type Rarity = 'Common' | 'Uncommon' | 'Rare' | 'Epic' | 'Legendary'
 
 const nftData = [
-  { id: 1, name: 'Red Light District Diva', type: 'Hooker', rarity: 'Legendary', powerLevel: 95, price: 10.5, image: '/images/red/red1.webp' },
-  { id: 2, name: 'Mellow Yellow Coffeeshop', type: 'Light Drugs', rarity: 'Common', powerLevel: 30, price: 0.5, image: '/images/red/guy1.jpeg' },
+  { id: 1, name: 'Red Light District Diva', type: 'Hooker', rarity: 'Legendary', powerLevel: 95, price: 10.5, image: withBasePath('/images/red/red1.webp') },
+  { id: 2, name: 'Mellow Yellow Coffeeshop', type: 'Light Drugs', rarity: 'Common', powerLevel: 30, price: 0.5, image: withBasePath('/images/red/guy1.jpeg') },
   { id: 3, name: 'Underground Rave', type: 'Hard Drugs', description: 'Captures the essence of Amsterdam\'s vibrant underground party scene.', rarity: 'Rare', powerLevel: 75, foundCount: 20, maxHealth: 80, attack: 70, defense: 60, speed: 85, tokenId: 'AMAPA003', price: 5.0 },]
 
 const rarityColors = {

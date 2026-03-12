@@ -30,7 +30,9 @@ export interface CoffeeShopData {
   iconSize: [number, number]; // Add this line to specify the icon size
 }
 
-export const coffeeShops: CoffeeShopData[] = [
+import { withBasePath } from '@/lib/basePath';
+
+const coffeeShopsRaw: CoffeeShopData[] = [
   {
     id: '1',
     name: 'The Bulldog',
@@ -808,5 +810,15 @@ export const coffeeShops: CoffeeShopData[] = [
     iconSize: [40, 40], // Add this line to specify the icon size
   },
 ];
+
+export const coffeeShops: CoffeeShopData[] = coffeeShopsRaw.map((shop) => ({
+  ...shop,
+  iconUrl: withBasePath(shop.iconUrl),
+  descriptionImageUrl: withBasePath(shop.descriptionImageUrl),
+  nftGallery: shop.nftGallery.map((nft) => ({
+    ...nft,
+    image: withBasePath(nft.image),
+  })),
+}));
 
 export const coffeeShopIds: string[] = coffeeShops.map(shop => shop.id);

@@ -2,6 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/basePath";
 
 interface Room {
   id: number;
@@ -11,9 +12,9 @@ interface Room {
 }
 
 const rooms: Room[] = [
-  { id: 1, name: "Gallery Room", bgImage: "/images/rooms/gallery.jpg", description: "View your NFT gallery here." },
-  { id: 2, name: "Private Room", bgImage: "/images/rooms/private.jpg", description: "Your personal space to stake NFTs." },
-  { id: 3, name: "Trading Room", bgImage: "/images/rooms/trading.jpg", description: "Trade and explore NFTs with others." },
+  { id: 1, name: "Gallery Room", bgImage: withBasePath("/images/rooms/gallery.jpg"), description: "View your NFT gallery here." },
+  { id: 2, name: "Private Room", bgImage: withBasePath("/images/rooms/private.jpg"), description: "Your personal space to stake NFTs." },
+  { id: 3, name: "Trading Room", bgImage: withBasePath("/images/rooms/trading.jpg"), description: "Trade and explore NFTs with others." },
   // Add more rooms as needed
 ];
 

@@ -1,4 +1,6 @@
 // File: /app/data/card.ts
+import { withBasePath } from '@/lib/basePath';
+
 export class Card {
   getImage(): string | undefined {
     throw new Error('Method not implemented.');
@@ -22,12 +24,12 @@ export class Card {
 
   // Method to get the front image
   getFrontImage(): string {
-    return this.image;
+    return withBasePath(this.image);
   }
 
   // Method to get the back image
   getBackImage(): string {
-    return this.cardBack;
+    return withBasePath(this.cardBack);
   }
 }
 

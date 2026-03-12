@@ -6,13 +6,14 @@ import CardDisplay from './CardDisplay'; // Default import for CardDisplay
 import CardDisplayTransport from './CardDisplayTransport'; // Import the new CardDisplayTransport component
 import CardDisplayEquip from './CardDisplayEquip';
 import CardDisplayPc from './CardDisplayPc';
+import { withBasePath } from "@/lib/basePath";
 
 // New card instance for CategoryCard
 const CategoryCard = {
   suit: 'strain', // Adjust the suit as needed
   rank: 'clover', // Adjust the rank as needed
-  image: '/images/CARD/STRAIN/DeckClover.png', // Path to the Clover card image
-  cardBack: '/images/CARD/STRAIN/CardBack.png', // Path to the card back image
+  image: withBasePath('/images/CARD/STRAIN/DeckClover.png'), // Path to the Clover card image
+  cardBack: withBasePath('/images/CARD/STRAIN/CardBack.png'), // Path to the card back image
 };
 
 function Deck() {

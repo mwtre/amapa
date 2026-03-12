@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Card, CardContent } from "@/components/ui/card"
 import { CardSneaker,CardrSun,CardWatch } from '../app/data/card'; // Import card instances including BusCard
 import { FaSearchPlus } from 'react-icons/fa'; // Import zoom-in icon from react-icons
+import { withBasePath } from "@/lib/basePath";
 
 // Update the CardProps interface to include the image property
 interface CardProps {
@@ -61,14 +62,14 @@ const CardDisplayEquip: React.FC = () => {
     setSelectedCard(null); // Close the selected card
   }
 
-  const mainCard = { id: 0, isMain: true, image: '/images/CARD/EQUIP/CLoverEquip.png' }; // Use transport image for the main card
+  const mainCard = { id: 0, isMain: true, image: withBasePath('/images/CARD/EQUIP/CLoverEquip.png') }; // Use transport image for the main card
   const additionalCards = [CardSneaker, CardrSun,CardWatch]; // Include BusCard as an additional card
  
   return (
 
 
     <div className="min-h-screen flex items-center justify-center bg-transparent p-0 m-0"> {/* Set background to transparent */}
-      <audio ref={audioRef} src="/sounds/card-deck-sound.mp3" preload="auto" />
+      <audio ref={audioRef} src={withBasePath("/sounds/card-deck-sound.mp3")} preload="auto" />
       <div className="relative flex space-x-0"> {/* Remove space between cards */}
         {/* Always show the main card */}
         <motion.div

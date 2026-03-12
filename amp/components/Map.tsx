@@ -12,6 +12,7 @@ import { coffeeShops, coffeeShopIds, CoffeeShopData } from '@/app/data/coffeeSho
 import { CoffeeShopPopup } from './subcomp/CoffeeShopPopup';
 import { NFTPopup } from './subcomp/NFTPopup';
 import Link from 'next/link';
+import { withBasePath } from '@/lib/basePath';
 
 // NFT types and locations
 const nftTypes = [
@@ -130,7 +131,7 @@ export const Map: React.FC = () => {
     if (coffeeShops) {
       coffeeShops.forEach((shop) => {
         const icon = L.icon({
-          iconUrl: shop.customIcon ? shop.iconUrl : '/images/default-marker.png',
+          iconUrl: shop.customIcon ? shop.iconUrl : withBasePath('/images/default-marker.png'),
           iconSize: [40, 40], // Adjust these values as needed
         });
         // ... rest of the code
